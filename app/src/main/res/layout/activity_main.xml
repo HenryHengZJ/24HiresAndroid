@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.zjheng.jobseed.jobseed.LoginScene.NonSwipeableViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:background="@color/wallet_bright_foreground_disabled_holo_light"
+        android:layout_height="0.5dp"
+        android:layout_width="fill_parent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabTextAppearance="@style/NavigationTabTextAppeareance"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/background_light" />
+
+            <ImageView
+                android:layout_height="55dp"
+                app:srcCompat="@drawable/postbtn"
+                android:id="@+id/postBtn"
+                android:padding="14dp"
+                android:layout_width="55dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:alpha="0.8"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:id="@+id/toolLay"
+        android:background="@android:color/transparent">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

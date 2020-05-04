@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:color/transparent"
+            android:id="@+id/homeicongrey"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/redcircle_bg"
+            android:layout_alignTop="@+id/homeicongrey"
+            android:layout_toRightOf="@+id/homeicongrey"
+            android:id="@+id/notifiBadge"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

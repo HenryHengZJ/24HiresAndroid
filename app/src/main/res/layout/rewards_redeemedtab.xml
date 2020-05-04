@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buttonTextColor">
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:numColumns="2"
+        android:columnWidth="90dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center"
+        android:stretchMode="columnWidth"
+        android:id="@+id/redeemedlist">
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/startredeemedLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/startImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/textView21"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.9"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/rewards_icon" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/starttxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView21"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="Start earning points and redeem offers!"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:id="@+id/noInternetLay"
+        android:visibility="gone">
+
+        <TextView
+            android:text="No Internet Connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView24"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorLightGray"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/nointernetconnection"
+            android:id="@+id/imageView16"
+            android:layout_above="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retryBtn"
+            android:layout_below="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            app:cardBackgroundColor="@color/com_facebook_button_background_color_focused_disabled"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/reload"
+                    android:id="@+id/imageView19"
+                    android:layout_weight="1"
+                    android:padding="7dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:text="Tap to Retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView26"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

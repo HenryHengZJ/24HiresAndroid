@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_profile_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/transparent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/background_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:text="About Me"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/textView100"
+                            android:textSize="15sp"
+                            android:layout_alignParentTop="false"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorAccent"
+                            android:gravity="center_vertical"
+                            android:textStyle="normal|bold" />
+
+                        <ImageButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/editbtn"
+                            android:id="@+id/abouteditbtn"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:visibility="visible"
+                            android:padding="7dp"
+                            android:layout_alignParentRight="false" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="4dp"
+                            android:id="@+id/Abouttxt"
+                            android:layout_toRightOf="@+id/imageView1"
+                            android:ems="10"
+                            android:layout_marginTop="2dp"
+                            android:hint="Add descriptions about yourself"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/bodyTextColor"
+                            android:paddingRight="10dp"
+                            android:textIsSelectable="true" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/AgeLay"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:text="Age: "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView27"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/useragetxt"
+                            android:layout_toRightOf="@+id/imageView1"
+                            android:ems="10"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/bodyTextColor"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/WeightLay"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:text="Weight: "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/userweighttxt"
+                            android:layout_toRightOf="@+id/imageView1"
+                            android:ems="10"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/bodyTextColor"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/HeightLay"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:text="Height: "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/userheightttxt"
+                            android:layout_toRightOf="@+id/imageView1"
+                            android:ems="10"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/bodyTextColor"
+                            android:paddingRight="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/shadowColor"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/profilelocation1"
+                        android:id="@+id/locationpic"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/locationtxt1"
+                        android:textSize="15sp"
+                        android:layout_alignParentTop="false"
+                        android:layout_weight="1"
+                        android:layout_toRightOf="@+id/locationpic"
+                        android:layout_below="@+id/Locationtxt"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="visible"
+                        android:textColor="@color/bodyTextColor"
+                        android:hint="Pick your location"
+                        android:layout_marginRight="10dp"
+                        android:selectAllOnFocus="false"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Locationtxt"
+                        android:layout_toRightOf="@+id/locationpic"
+                        android:maxLines="1"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAccent"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/locationeditbtn"
+                        android:text="Location"
+                        android:textStyle="normal|bold" />
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/editbtn"
+                        android:id="@+id/locationeditbtn"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="7dp"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/shadowColor"
+                android:layout_marginTop="5dp">
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/profileemail1"
+                        android:id="@+id/contactpic"
+                        android:visibility="visible"
+                        android:layout_centerVertical="false"
+                        android:padding="8dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignTop="@+id/contacteditbtn"
+                        android:layout_marginTop="26dp" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/profilecall1"
+                        android:id="@+id/contactpic2"
+                        android:visibility="visible"
+                        android:layout_centerVertical="false"
+                        android:padding="9dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignTop="@+id/phonecontact" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phonecontact"
+                        android:textSize="15sp"
+                        android:layout_alignParentTop="false"
+                        android:layout_toRightOf="@+id/contactpic"
+                        android:layout_below="@+id/contacttxt1"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:hint="Add your phone contact"
+                        android:textColor="@color/bodyTextColor"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/contacttxt1"
+                        android:textSize="15sp"
+                        android:layout_alignParentTop="false"
+                        android:layout_toRightOf="@+id/contactpic"
+                        android:layout_below="@+id/Contacttxt"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:hint="Add your email"
+                        android:textColor="@color/bodyTextColor"
+                        android:layout_marginRight="10dp"
+                        android:textIsSelectable="true" />
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/editbtn"
+                        android:id="@+id/contacteditbtn"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="7dp"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Contacttxt"
+                        android:maxLines="1"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAccent"
+                        android:padding="10dp"
+                        android:text="Contacts"
+                        android:layout_alignBottom="@+id/contacteditbtn"
+                        android:layout_alignLeft="@+id/contacttxt1"
+                        android:layout_alignStart="@+id/contacttxt1"
+                        android:textStyle="normal|bold" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/shadowColor"
+                android:layout_marginBottom="5dp"
+                android:layout_height="5dp">
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/profilework1"
+                        android:id="@+id/workpicfinal"
+                        android:visibility="invisible"
+                        android:padding="8dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="false" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/workexp1"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/profilework1"
+                            android:id="@+id/workpic"
+                            android:visibility="visible"
+                            android:padding="8dp"
+                            android:layout_centerVertical="false"
+                            android:layout_alignParentBottom="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workexptxt"
+                            android:layout_toRightOf="@+id/workpic"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorAccent"
+                            android:padding="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/workexpeditbtn"
+                            android:text="Work Experience"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workcompanytxt"
+                            android:textSize="14sp"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/workpic"
+                            android:layout_below="@+id/worktitletxt"
+                            android:layout_marginLeft="10dp"
+                            android:hint="Add your past work company "
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textIsSelectable="true" />
+
+                        <ImageButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/editbtn"
+                            android:id="@+id/workexpeditbtn"
+                            android:background="@android:color/transparent"
+                            android:scaleType="fitCenter"
+                            android:paddingLeft="7dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="7dp"
+                            android:visibility="visible"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktitletxt"
+                            android:ems="10"
+                            android:hint="Add your past job title "
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:textColor="@color/bodyTextColor"
+                            android:layout_below="@+id/workexpeditbtn"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:layout_toRightOf="@+id/workpic"
+                            android:layout_marginLeft="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktime1"
+                            android:visibility="gone"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/workcompanytxt"
+                            android:layout_alignStart="@+id/workcompanytxt"
+                            android:layout_alignLeft="@+id/workcompanytxt"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="5dp"
+                            android:textIsSelectable="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/workexp2"
+                        android:layout_below="@+id/workexp1"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/profilework1"
+                            android:id="@+id/workpic2"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:padding="8dp" />
+
+                        <TextView
+                            android:text="Add your work company "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workcompanytxt2"
+                            android:textSize="14sp"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/workpic2"
+                            android:layout_below="@+id/worktitletxt2"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktitletxt2"
+                            android:layout_toRightOf="@+id/workpic2"
+                            android:ems="10"
+                            android:hint="Work title"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:textColor="@color/bodyTextColor"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktime2"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/workcompanytxt2"
+                            android:layout_alignStart="@+id/workcompanytxt2"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="5dp"
+                            android:textIsSelectable="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/workexp3"
+                        android:layout_below="@+id/workexp2"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/profilework1"
+                            android:id="@+id/workpic3"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:padding="8dp" />
+
+                        <TextView
+                            android:text="Add your work company "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workcompanytxt3"
+                            android:textSize="14sp"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/workpic3"
+                            android:layout_below="@+id/worktitletxt3"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktitletxt3"
+                            android:layout_toRightOf="@+id/workpic3"
+                            android:ems="10"
+                            android:hint="Work title"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="15sp"
+                            android:textColor="@color/bodyTextColor"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktime3"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/workcompanytxt3"
+                            android:layout_alignStart="@+id/workcompanytxt3"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="5dp"
+                            android:textIsSelectable="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/workexp4"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:layout_below="@+id/workexp3">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/profilework1"
+                            android:id="@+id/workpic4"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:padding="8dp" />
+
+                        <TextView
+                            android:text="Add your work company "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workcompanytxt4"
+                            android:textSize="14sp"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/workpic4"
+                            android:layout_below="@+id/worktitletxt4"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktitletxt4"
+                            android:layout_toRightOf="@+id/workpic4"
+                            android:ems="10"
+                            android:hint="Work title"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/background_dark"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktime4"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/workcompanytxt4"
+                            android:layout_alignStart="@+id/workcompanytxt4"
+                            android:layout_alignLeft="@+id/workcompanytxt4"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="5dp"
+                            android:textIsSelectable="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:id="@+id/workexp5"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="20dp"
+                        android:layout_below="@+id/workexp4">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/profilework1"
+                            android:id="@+id/workpic5"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:padding="8dp" />
+
+                        <TextView
+                            android:text="Add your work company "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/workcompanytxt5"
+                            android:textSize="14sp"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/workpic5"
+                            android:layout_below="@+id/worktitletxt5"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktitletxt5"
+                            android:layout_toRightOf="@+id/workpic5"
+                            android:ems="10"
+                            android:hint="Work title"
+                            android:ellipsize="end"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/background_dark"
+                            android:layout_marginLeft="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:maxLines="1"
+                            android:textIsSelectable="true" />
+
+                        <TextView
+                            android:text="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/worktime5"
+                            android:maxLines="1"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/workcompanytxt5"
+                            android:layout_alignStart="@+id/workcompanytxt5"
+                            android:layout_alignLeft="@+id/workcompanytxt5"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="5dp"
+                            android:textIsSelectable="true" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/shadowColor"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="5dp">
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/profileeducation1"
+                        android:id="@+id/educationpic"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/educationtxt1"
+                        android:textSize="15sp"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_alignParentTop="false"
+                        android:layout_toRightOf="@+id/educationpic"
+                        android:layout_below="@+id/Educationtxt"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:hint="Add your college/university "
+                        android:textColor="@color/bodyTextColor"
+                        android:layout_marginRight="10dp"
+                        android:textIsSelectable="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Educationtxt"
+                        android:layout_toRightOf="@+id/educationpic"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAccent"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/educationeditbtn"
+                        android:text="Education"
+                        android:textStyle="normal|bold" />
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/editbtn"
+                        android:id="@+id/educationeditbtn"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="7dp"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/shadowColor"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="5dp">
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="20dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/profilelanguage1"
+                        android:id="@+id/languagepic"
+                        android:visibility="visible"
+                        android:layout_centerVertical="true"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/languagetxt1"
+                        android:textSize="15sp"
+                        android:layout_alignParentTop="false"
+                        android:layout_toRightOf="@+id/languagepic"
+                        android:layout_below="@+id/Languagetxt"
+                        android:padding="10dp"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/bodyTextColor"
+                        android:hint="Add your languages "
+                        android:layout_marginRight="10dp"
+                        android:textIsSelectable="true" />
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/editbtn"
+                        android:id="@+id/languageeditbtn"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:paddingBottom="7dp"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Languagetxt"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorAccent"
+                        android:padding="10dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignLeft="@+id/languagetxt1"
+                        android:layout_alignStart="@+id/languagetxt1"
+                        android:text="Language"
+                        android:textStyle="normal|bold" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/shadowColor"
+                android:layout_height="5dp">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title = "General Settings">
+
+        <Preference
+            android:title="Reset Password"
+            android:icon = "@drawable/ic_create_black_24dp"
+            android:key="resetpassword" />
+
+        <SwitchPreference
+            android:title="Messages Notifications"
+            android:summary="Receive chat pop-up notifications"
+            android:key="chatnotifications"/>
+
+        <SwitchPreference
+            android:title="Bookings Notifications"
+            android:summary="Receive new bookings notifications"
+            android:key="bookingnotifications"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title = "Freelancer Settings">
+
+        <SwitchPreference
+            android:title="Shortlisted Notifications"
+            android:summary="Receive shortlisted notifications on applied jobs"
+            android:key="shortlistnotifications"/>
+
+        <SwitchPreference
+            android:title="Hired Notifications"
+            android:summary="Receive hired notifications on shortlisted jobs"
+            android:key="hirednotifications"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title = "Employer Settings">
+
+        <SwitchPreference
+            android:title="Applicants Notifications"
+            android:summary="Receive in-coming applications notifications"
+            android:key="applicantsnotifications"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title = "More Information">
+
+        <Preference
+            android:title="Send Feedback"
+            android:icon = "@drawable/ic_grade_black_24dp"
+            android:key="sendfeedback" />
+
+        <Preference
+            android:title="Report Fraud"
+            android:icon = "@drawable/ic_feedback_black_24dp"
+            android:key="reportfraud" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title = "Logout">
+
+        <Preference
+            android:title="Logout"
+            android:icon = "@drawable/ic_reply_all_black_24dp"
+            android:key="logout" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

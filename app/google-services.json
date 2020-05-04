@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "848133085531",
+    "firebase_url": "https://jobseed-2cb76.firebaseio.com",
+    "project_id": "jobseed-2cb76",
+    "storage_bucket": "jobseed-2cb76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848133085531:android:b4224429a14f5626",
+        "android_client_info": {
+          "package_name": "com.zjheng.jobseed.jobseed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848133085531-3a94vug2ecl7t72u05sg5q4tm3g4ghh0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zjheng.jobseed.jobseed",
+            "certificate_hash": "e0438f24a19149ac507813bb81112dc7cec0479b"
+          }
+        },
+        {
+          "client_id": "848133085531-n50o57k22bqdpmu2pf7hc22jb33hme7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuHZRT30kj63bROo7mN0otYr_Kdp0L9fM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848133085531-n50o57k22bqdpmu2pf7hc22jb33hme7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

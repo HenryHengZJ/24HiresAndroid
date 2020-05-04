@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Lay">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/lock" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra = "5dp"
+        android:id="@+id/dialogtxt"
+        android:padding="10dp"
+        android:text="In the effort of eliminating fake jobs / scams, it is required for employers to have verified phone numbers. An SMS will be sent to verify your phone number."
+        android:textSize="16sp"
+        android:textColor="@color/bodyTextColor"
+        android:layout_below="@+id/Lay"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:id="@+id/customLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogtxt"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinnercountrycode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical|center_horizontal|center" />
+
+        <EditText
+            android:id="@+id/phonenumtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/post_edittext_bg"
+            android:hint="Enter your phone number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:scrollHorizontally="false"
+            android:textColor="@color/bodyTextColor"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/customLay"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:text="NEXT"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nextBtn"
+        android:layout_toLeftOf="@+id/nextBtn"
+        android:background="@android:color/transparent"
+        android:text="CANCEL" />
+
+</RelativeLayout>

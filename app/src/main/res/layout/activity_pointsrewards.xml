@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.OtherUserScene.OtherUser"
+    android:background="@android:color/background_light">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@android:color/background_light">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleMarginBottom="70dp"
+            app:contentScrim="@color/colorAccent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:id="@+id/postImage"
+                android:background="@android:color/transparent"
+                android:alpha="1"
+                app:srcCompat="@drawable/rewards" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:fitsSystemWindows="true"
+                android:alpha="0.3"
+                android:layout_gravity="top" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:text="250"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView47"
+                    android:layout_weight="1"
+                    android:textSize="26sp"
+                    android:textStyle="normal|bold"
+                    android:textColor="@android:color/holo_orange_light" />
+
+                <TextView
+                    android:text="Redeemable Points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView46"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/buttonTextColor"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_other"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="55dp"
+                app:layout_collapseMode="pin">
+
+                <LinearLayout
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:background="@android:color/transparent"
+                    android:fitsSystemWindows="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardBackgroundColor="@color/buttonTextColor"
+                        app:cardCornerRadius="3dp"
+                        app:cardElevation="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:elevation="0dp">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/searchtxt"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textSize="14sp"
+                                android:background="@android:color/transparent"
+                                android:paddingBottom="5dp"
+                                android:textColor="@color/bodyTextColor"
+                                android:maxLines="1"
+                                android:layout_centerVertical="true"
+                                android:hint="Search Promo Code"
+                                android:layout_marginRight="50dp"
+                                android:textColorHint="@color/colorLightGray" />
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@android:color/transparent"
+                                app:cardElevation="0dp"
+                                app:cardMaxElevation="0dp"
+                                android:id="@+id/searchCardView"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:layout_alignParentRight="true">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="15dp"
+                                        android:background="@drawable/ic_search_black_24dp"
+                                        android:layout_centerInParent="true" />
+
+                                </RelativeLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                app:tabIndicatorColor="@android:color/background_light"
+                app:tabTextAppearance="@style/NavigationTabTextAppeareance"
+                app:tabSelectedTextColor="@android:color/background_light"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fitsSystemWindows="false"
+                android:background="@android:color/transparent" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

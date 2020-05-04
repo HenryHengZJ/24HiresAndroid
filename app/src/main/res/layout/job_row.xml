@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/cardview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:id="@+id/Rlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/postImage"
+                android:transitionName="jobimage"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:srcCompat="@drawable/profilebg3" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_alignBottom="@+id/postImage"
+                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                android:transitionName="viewtransition"
+                android:layout_height="100dp"
+                android:id="@+id/gradientView" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/postName"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textSize="15sp"
+                android:textColor="@android:color/background_light"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignBottom="@+id/postImage"
+                android:transitionName="titletransition"
+                android:paddingBottom="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/postDescrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/bodyTextColor"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/postCategoryx"
+                android:layout_marginLeft="10dp"
+                android:maxLines="4"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postCategoryx"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/postImage"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/category_background"
+                android:textSize="12sp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DateLay"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/postDescrip">
+
+                <ImageView
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/calender_green2"
+                    android:id="@+id/imageView18"
+                    android:alpha="1"
+                    android:paddingLeft="10dp"
+                    android:layout_width="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datetxt"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorShortList"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="normal|bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PriceLay"
+                android:layout_below="@+id/DateLay"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/salary_sign"
+                    android:id="@+id/imageView19"
+                    android:alpha="1"
+                    android:paddingLeft="10dp"
+                    android:layout_width="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/wagesstxt"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorAdd"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="normal|bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postCompany"
+                android:layout_below="@+id/PriceLay"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textStyle="normal|bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <View
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="@drawable/bulletsymbol"
+                android:layout_below="@+id/postCompany"
+                android:id="@+id/bulletpoint"
+                android:layout_marginTop="11dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postLocation"
+                android:layout_below="@+id/postCompany"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/bulletpoint"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"
+                android:paddingRight="10dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

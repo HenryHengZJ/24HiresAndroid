@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buttonTextColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:text="SKIP"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/skipBtn"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/background_light" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mscrollview"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/toolbar_other"
+        android:layout_above="@+id/nextCardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:text="What and Where have you been studying?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/bodyTextColor"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/educationtxt"
+                    android:hint="Add your college / university"
+                    android:background="@drawable/post_edittext_bg"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:inputType="text|textCapSentences|textMultiLine"
+                    android:imeOptions="actionDone"
+                    android:layout_marginBottom="10dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/nextCardView">
+
+        <TextView
+            android:text="Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="normal|bold"
+            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/applyfilterbtn"
+            android:textAllCaps="true" />
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:srcCompat="@android:color/transparent"
+            android:id="@+id/bannerImgView" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/titletxt"
+            android:layout_marginLeft="15dp"
+            android:layout_above="@+id/descriptxt"
+            android:textSize="18sp"
+            android:textStyle="normal|bold"
+            android:textColor="@color/buttonTextColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptxt"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

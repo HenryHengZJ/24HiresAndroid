@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zjheng.jobseed.jobseed">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+
+    <application
+        android:name=".FireApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/appsicon6"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_place_api" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="24hires.com"
+                    android:scheme="http" />
+                <data
+                    android:host="24hires.com"
+                    android:scheme="https" />
+                <data
+                    android:host="vh87a.app.goo.gl/"
+                    android:scheme="https" />
+            </intent-filter>/>
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginScene.Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".CreateProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".IntroProfile1"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".IntroProfile2"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".IntroProfile3"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".IntroProfile4"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".LoginScene.EmailLogin.LoginwithEmail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LoginScene.EmailLogin.ResetPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LoginScene.SignUp.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+
+        <activity
+            android:name=".PostScene.Post"
+            android:screenOrientation="portrait"
+            android:theme="@style/PostTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ShowcaseTalentScene.ShowcaseTalent"
+            android:screenOrientation="portrait"
+            android:theme="@style/PostTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ActivitiesScene.EditPostScene.EditPost"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".TalentActivities.EditTalent"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".PostScene.CategorySelect"
+            android:label="Select Category"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".ApplicantsScene.HireForm"
+            android:label="Hire Applicant"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".TalentDetails.BookingForm"
+            android:label="Booking Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".HomeScene.BannerDetails"
+            android:label="Link Details"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".LoginScene.TnCDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".ActivitiesScene.EditPostScene.EditCategorySelect"
+            android:label="Select Category"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".JobDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".TalentDetails.TalentDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".TalentDetails.TalentImages"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".TalentDetails.TalentVideos"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+        <activity
+            android:name=".SearchJobScene.SearchBar"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SearchJobScene.SearchTalentBar"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SearchJobScene.SearchResult"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".SearchJobScene.SearchCategory"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".SearchTalentScene.FilterTalent"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".HomeScene.ExploreJobs.FilterJob"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".SearchTalentScene.SearchTalent"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".SearchJobScene.SearchJobCategoryBar"
+            android:label="Job Categories"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalAppTheme" />
+
+        <!-- Firebase Notifications -->
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- ./Firebase Notifications -->
+
+        <activity
+            android:name=".UserProfileScene.WorkExperience"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".MessageScene.ChatRoom"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OtherUserScene.OtherUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".UserProfileScene.OwnUserProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".NearbyJobScene.NearbyJob"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".ApplicantsScene.ApplicantUserProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".UnUsedFiles.ShortListedApplicantUserProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+        <activity
+            android:name=".UserProfileScene.Contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".UserProfileScene.Education"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".UserProfileScene.Language"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".UserProfileScene.EditProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".UnUsedFiles.Applicants"
+            android:label="Applicants"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ApplicantsScene.Applicant"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".BookingScene.Bookings"
+            android:screenOrientation="portrait"
+            android:theme="@style/JobDetailTheme" />
+        <activity
+            android:name=".UnUsedFiles.ShortListedApplicants"
+            android:label="ShortListed Applicants"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HiredApplicantsScene.ClosedHiredApplicants"
+            android:label="Hired Applicants"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RemovedJob"
+            android:label="Job Removed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RemovedTalent"
+            android:label="Talent Removed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TalentDetails.SeeMoreReview"
+            android:label="Reviews"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LocationList"
+            android:screenOrientation="portrait"
+            android:theme="@style/PostTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".TalentCategories.TalentCategoryList"
+            android:screenOrientation="portrait"
+            android:theme="@style/PostTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".TalentCategories.SubTalentCategoryList"
+            android:screenOrientation="portrait"
+            android:theme="@style/PostTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".HowItWorks.HowJobWorks"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".UserProfileScene.HowItWorks"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".HowItWorks.HowTalentWorks"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+        <activity
+            android:name=".MustUpdateView"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginNoActionBar" />
+
+        <activity
+            android:name=".PointsRewards"
+            android:label="Points and Rewards"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".PointsandRewards"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyxTheme.Detail" />
+
+    </application>
+
+</manifest>

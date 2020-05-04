@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.SearchJobScene.SearchResult"
+    android:background="@color/buttonTextColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent" >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="0dp"
+            android:layout_gravity="end"
+            app:cardMaxElevation="0dp"
+            android:id="@+id/sortCardView"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/sortBtn"
+                    android:background="@drawable/sortfilter"
+                    android:layout_centerInParent="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_other"
+        android:id="@+id/nestedscroll">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/shadowColor"
+                android:id="@+id/filterScroll1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/filterLay"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="visible"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:text="Filter:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/filterbywagestxt"
+                        android:background="@drawable/sortfilter_background"
+                        android:padding="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/filterbydatetxt"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/sortfilter_background"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/filtercitytxt"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/sortfilter_background"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sortLay"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@color/shadowColor"
+                android:visibility="gone"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:text="Sort By:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filterbyreviewtxt"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/sortfilter_background"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/blankLay"
+                android:visibility="gone">
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/blog_list"
+                android:visibility="visible"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/nocategoryLay"
+        android:background="@android:color/background_light"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar_other">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/shadowColor"
+            android:id="@+id/filterScroll2"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/filterLay2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:visibility="visible"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:text="Filter:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filterbywagestxt2"
+                    android:background="@drawable/sortfilter_background"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filterbydatetxt2"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/sortfilter_background"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/filtercitytxt2"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/sortfilter_background"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortLay2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@color/shadowColor"
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/filterScroll2">
+
+            <TextView
+                android:text="Sort By:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filterbyreviewtxt2"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/sortfilter_background"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView16"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:text="Sorry, there look like there aren't any jobs available in "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jobnotfoundtxt"
+            android:visibility="visible"
+            android:lineSpacingExtra="5dp"
+            android:layout_alignParentBottom="false"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="14sp"
+            android:layout_above="@+id/textView16"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_centerVertical="false" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/nojobfoundimg1"
+            android:id="@+id/imageView12"
+            android:layout_below="@+id/textView16"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:alpha="0.8" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:id="@+id/noInternetLay"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar_other">
+
+        <TextView
+            android:text="No Internet Connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView24"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorLightGray"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/nointernetconnection"
+            android:id="@+id/imageView16"
+            android:layout_above="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retryBtn"
+            android:layout_below="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            app:cardBackgroundColor="@color/com_facebook_button_background_color_focused_disabled"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/reload"
+                    android:id="@+id/imageView19"
+                    android:layout_weight="1"
+                    android:padding="7dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:text="Tap to Retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView26"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

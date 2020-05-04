@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buttonTextColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                android:id="@+id/congratzCardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="15dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/hiredmedal"
+                            android:layout_weight="1" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:textSize="15sp"
+                                android:textColor="?android:attr/colorMultiSelectHighlight"
+                                android:gravity="center_vertical"
+                                android:text="Congratulation! You are hired!"
+                                android:textStyle="normal|bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/Rlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:text="Hirer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="@color/cast_intro_overlay_background_color"
+                            android:textStyle="normal|bold"
+                            android:textSize="15sp"
+                            android:layout_toRightOf="@+id/postImage"
+                            android:paddingRight="10dp"
+                            android:layout_alignTop="@+id/postImage"
+                            android:paddingLeft="15dp"
+                            android:layout_marginTop="5dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="#ffffff"
+                            android:layout_alignParentTop="false"
+                            android:src="@drawable/defaultprofile_pic"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/postImage"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="false"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/postName"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrssed"
+                            android:layout_alignParentTop="false"
+                            android:textStyle="normal|bold"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/postImage"
+                            android:paddingRight="10dp"
+                            android:layout_below="@+id/textView" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:text="Dates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight="1"
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:textSize="15sp"
+                        android:textStyle="normal|bold"
+                        android:paddingLeft="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/post_calendar5"
+                            android:layout_weight="1"
+                            android:padding="7dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/datetxt"
+                                android:layout_marginLeft="10dp"
+                                android:padding="10dp"
+                                android:textSize="15sp"
+                                android:textColor="@color/bodyTextColor"
+                                android:gravity="center_vertical" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <TextView
+                        android:text="Venue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView8"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight="1"
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:textSize="15sp"
+                        android:textStyle="normal|bold"
+                        android:paddingLeft="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/profile_location"
+                            android:id="@+id/imageView34"
+                            android:layout_weight="1"
+                            android:padding="7dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/locationtxt"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:textColor="@color/bodyTextColor"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:text="Payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight="1"
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:textStyle="normal|bold"
+                        android:textSize="15sp"
+                        android:paddingLeft="10dp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:layout_marginTop="5dp">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Num of Days"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/numtxt"
+                                android:textSize="15sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/bodyTextColor" />
+
+                            <TextView
+                                android:layout_width ="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:id="@+id/postNumDates"
+                                android:textColor="@color/bodyTextColor"
+                                android:lineSpacingExtra = "5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:padding="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/hoursLay"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:text="Num of Hours per Day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/bodyTextColor" />
+
+                            <TextView
+                                android:layout_width ="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:id="@+id/postNumHours"
+                                android:textColor="@color/bodyTextColor"
+                                android:lineSpacingExtra = "5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:padding="5dp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/bodyTextColor"
+                                android:textSize="15sp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/basicratetxt" />
+
+                            <TextView
+                                android:layout_width ="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:id="@+id/postBasicPay"
+                                android:textColor="@color/bodyTextColor"
+                                android:lineSpacingExtra = "5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:padding="5dp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorLightGray">
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:text="Total Basic Pay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/bodyTextColor" />
+
+                            <TextView
+                                android:layout_width ="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:id="@+id/postTotalBasicPay"
+                                android:textColor="@color/colorAccent"
+                                android:lineSpacingExtra = "5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:layout_weight="1"
+                                android:textStyle="normal|bold"
+                                android:padding="5dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <ImageButton
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/addtipsbtn"
+                                android:background="@drawable/addbtn_blue"
+                                android:layout_gravity="center_vertical" />
+
+                            <TextView
+                                android:text="Tips / Commision"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/bodyTextColor"
+                                android:textSize="15sp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp" />
+
+                            <TextView
+                                android:layout_width ="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:id="@+id/postTipsPay"
+                                android:textColor="@color/bodyTextColor"
+                                android:lineSpacingExtra = "5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:layout_weight="1"
+                                android:padding="5dp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorLightGray">
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:text="Total Pay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/bodyTextColor" />
+
+                            <TextView
+                                android:layout_width ="match_parent"
+                                android:layout_height ="wrap_content"
+                                android:id="@+id/postTotalAllPay"
+                                android:textColor="@color/colorAccent"
+                                android:lineSpacingExtra = "5dp"
+                                android:textSize="15sp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right|center_vertical"
+                                android:layout_weight="1"
+                                android:textStyle="normal|bold"
+                                android:padding="5dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:text="Payment Date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:textStyle="normal|bold"
+                        android:textSize="15sp"
+                        android:paddingLeft="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:srcCompat="@drawable/post_wages2"
+                            android:layout_weight="1"
+                            android:padding="7dp" />
+
+                        <TextView
+                            android:layout_width ="match_parent"
+                            android:layout_height ="wrap_content"
+                            android:id="@+id/postPaymentDate"
+                            android:textColor="@color/bodyTextColor"
+                            android:gravity="top|center_vertical"
+                            android:paddingTop="10dp"
+                            android:lineSpacingExtra = "5dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="15sp"
+                            android:textColorLink="@android:color/white"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:text="Additional Note"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView6"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_weight="1"
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:textSize="15sp"
+                        android:textStyle="normal|bold"
+                        android:paddingLeft="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width ="match_parent"
+                            android:layout_height ="wrap_content"
+                            android:id="@+id/postAddNote"
+                            android:textColor="@color/bodyTextColor"
+                            android:gravity="top|center_vertical"
+                            android:paddingTop="10dp"
+                            android:lineSpacingExtra = "5dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="16sp"
+                            android:paddingLeft="10dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reviewLay"
+                android:visibility="gone"
+                android:layout_centerVertical="false"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="18dp"
+                    android:background="@android:color/transparent"
+                    app:cardBackgroundColor="@color/calendar_selected_day_bg"
+                    app:cardElevation="5dp"
+                    android:id="@+id/reviewcardview"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Leave Feedback"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/reviewtxt"
+                            android:gravity="center"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:textColor="@color/buttonTextColor"
+                            android:background="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/hireCardView"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/acceptrejectLay"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/rejectOfferCardView">
+
+                <TextView
+                    android:text="REJECT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView41"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/background_light"
+                    android:background="@android:color/holo_red_light"
+                    android:textStyle="normal|bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/acceptOfferCardView">
+
+                <TextView
+                    android:text="ACCEPT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView42"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@color/colorGreen"
+                    android:textColor="@color/buttonTextColor"
+                    android:textStyle="normal|bold" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="false"
+        android:id="@+id/rejectedCardView"
+        android:visibility="gone">
+
+        <TextView
+            android:text="OFFER REJECTED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="normal|bold"
+            android:textColor="@color/buttonTextColor"
+            android:background="@android:color/holo_red_light"
+            android:id="@+id/rejectTxt" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="false"
+        android:id="@+id/acceptedCardView"
+        android:visibility="gone">
+
+        <TextView
+            android:text="OFFER ACCEPTED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textStyle="normal|bold"
+            android:textColor="@color/buttonTextColor"
+            android:background="@color/colorGreen"
+            android:id="@+id/acceptTxt" />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

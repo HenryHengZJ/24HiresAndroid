@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/buttonTextColor">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="On the Spot Cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/paymentBtn1"
+            android:visibility="visible"
+            android:background="@android:color/white"
+            android:textColor="@color/bodyTextColor"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="3 Days After Event Finishes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/paymentBtn2"
+            android:visibility="visible"
+            android:background="@android:color/white"
+            android:textColor="@color/bodyTextColor"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="7 Days After Event Finishes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/paymentBtn3"
+            android:visibility="visible"
+            android:background="@android:color/white"
+            android:textColor="@color/bodyTextColor"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="14 Days After Event Finishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentBtn4"
+        android:visibility="visible"
+        android:background="@android:color/white"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="30 Days After Event Finishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentBtn5"
+        android:visibility="visible"
+        android:background="@android:color/white"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="2 Months After Event Finishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentBtn6"
+        android:visibility="visible"
+        android:background="@android:color/white"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="3 Months After Event Finishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentBtn7"
+        android:visibility="visible"
+        android:background="@android:color/white"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/cardview_shadow_start_color">
+
+    </RelativeLayout>
+
+    <Button
+        android:text="Custom Payment Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentBtn8"
+        android:visibility="visible"
+        android:background="@android:color/white"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+
+</LinearLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.UserProfileScene.EditProfile"
+    android:background="@color/buttonTextColor">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mscrollview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:text="Profile Picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView105"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textStyle="normal|bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilepic"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#ffffff"
+                    android:scaleType="centerCrop"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/defaultprofile_pic" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:srcCompat="@drawable/editbtn"
+                    android:id="@+id/changeprofilepic"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/whitecircle_bg"
+                    android:padding="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/profilepic"
+                    android:layout_alignEnd="@+id/profilepic" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cardview1"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:text="Name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView10"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorAccent"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:textStyle="normal|bold"
+                                android:paddingBottom="10dp" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/nametxt"
+                            android:textSize="16sp"
+                            android:inputType="text|textCapSentences|textMultiLine"
+                            android:hint="Add your name "
+                            android:background="@drawable/post_edittext_bg"
+                            android:padding="10dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:text="About"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorAccent"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:paddingBottom="10dp"
+                                android:textStyle="normal|bold" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/abouttxt"
+                            android:hint="Add desciption about yourself"
+                            android:background="@drawable/post_edittext_bg"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:inputType="text|textCapSentences|textMultiLine"
+                            android:imeOptions="actionDone" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:text="Age (Optional)"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorAccent"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:paddingBottom="10dp"
+                                android:textStyle="normal|bold" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Add your age"
+                            android:background="@drawable/post_edittext_bg"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:id="@+id/agetxt"
+                            android:imeOptions="actionNext" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:text="Weight in kg (Optional)"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorAccent"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:paddingBottom="10dp"
+                                android:textStyle="normal|bold" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Add your weight in kg"
+                            android:background="@drawable/post_edittext_bg"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:id="@+id/weighttxt" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:text="Height in cm (Optional)"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorAccent"
+                                android:layout_alignParentTop="true"
+                                android:layout_weight="1"
+                                android:paddingLeft="10dp"
+                                android:paddingBottom="10dp"
+                                android:textStyle="normal|bold" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Add your weight in (cm)"
+                            android:background="@drawable/post_edittext_bg"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:id="@+id/heighttxt"
+                            android:layout_marginBottom="10dp" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

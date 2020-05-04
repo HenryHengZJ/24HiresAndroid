@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cast_expanded_controller_background_color"
+    android:id="@+id/Rlay"
+    android:clickable="false">
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/ic_close_white_24dp"
+        android:id="@+id/backBtn"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:paddingBottom="13dp"
+        android:paddingTop="13dp"
+        android:paddingRight="13dp"
+        android:paddingLeft="13dp"
+        android:layout_alignParentRight="true" />
+
+    <fragment
+        android:id="@+id/youtube_player_fragment"
+        class ="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

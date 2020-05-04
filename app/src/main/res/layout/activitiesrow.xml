@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/background_light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview"
+                app:cardElevation="0dp"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <RelativeLayout
+                    android:id="@+id/Rlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <RelativeLayout
+                        android:layout_width="110dp"
+                        android:layout_height="100dp"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/profileLay"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:layout_alignParentRight="false"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            android:background="@drawable/circle_shape"
+                            android:visibility="gone" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#ffffff"
+                        android:background="@android:color/transparent"
+                        android:layout_alignParentTop="false"
+                        android:src="@android:color/transparent"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:id="@+id/postImage"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                            android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+
+                        <View
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/blackcircle_bg"
+                            android:layout_alignTop="@+id/postImage"
+                            android:layout_alignStart="@+id/postImage"
+                            android:layout_alignLeft="@+id/postImage"
+                            android:id="@+id/closedview"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:text="JOB CLOSED"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:id="@+id/closedtext"
+                            android:layout_alignStart="@+id/postImage"
+                            android:layout_alignLeft="@+id/postImage"
+                            android:layout_alignTop="@+id/postImage"
+                            android:gravity="center"
+                            android:textColor="@android:color/background_light"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/hiredx2"
+                        android:id="@+id/hirebadgeImg"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/postName"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrssed"
+                        android:layout_alignParentTop="false"
+                        android:textStyle="normal|bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/profileLay"
+                        android:paddingRight="30dp"
+                        android:layout_alignTop="@+id/profileLay" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/postCompany"
+                        android:layout_marginTop="7dp"
+                        android:maxLines="1"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="normal|bold"
+                        android:paddingRight="10dp"
+                        android:layout_below="@+id/postName"
+                        android:layout_toRightOf="@+id/profileLay" />
+
+                    <TextView
+                        android:id="@+id/postDescrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/cast_intro_overlay_background_color"
+                        android:layout_alignParentTop="false"
+                        android:layout_marginTop="7dp"
+                        android:layout_below="@+id/postCompany"
+                        android:layout_marginLeft="15dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:layout_toRightOf="@+id/profileLay"
+                        android:paddingRight="10dp" />
+
+                    <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_more_vert_black_24dp"
+                    android:id="@+id/actionBtn"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:visibility="gone"
+                    android:paddingRight="5dp" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_close_black_24dp"
+                        android:id="@+id/removeBtn"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitCenter"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="5dp"
+                        android:visibility="gone"
+                        android:paddingRight="5dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/waitingRlay"
+                android:visibility="gone"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:background="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/waitsep"
+                    android:background="@color/cardview_shadow_start_color"
+                    android:layout_marginRight="10dp">
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/waitingtxt"
+                    android:text="Waiting for reply in"
+                    android:layout_centerVertical="false"
+                    android:layout_below="@+id/waitsep"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:text="23:44:41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timetxt"
+                    android:layout_alignParentRight="false"
+                    android:layout_toRightOf="@+id/waitingtxt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignTop="@+id/waitingtxt"
+                    android:textColor="@color/colorPrssed" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rejectedRlay"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:background="@android:color/background_light"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/rejectsep"
+                    android:background="@color/cardview_shadow_start_color"
+                    android:layout_marginRight="10dp">
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/redcircle_bg"
+                    android:id="@+id/chatnotifiBadge1"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/rejectsep"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rejectedtxt"
+                    android:layout_toRightOf="@+id/chatnotifiBadge1"
+                    android:layout_centerVertical="false"
+                    android:text="Unfortunately, you're not shortlisted"
+                    android:layout_below="@+id/rejectsep"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shortlistedRlay"
+                android:visibility="gone"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:background="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/shortlistsep"
+                    android:background="@color/cardview_shadow_start_color"
+                    android:layout_marginRight="10dp">
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/redcircle_bg"
+                    android:id="@+id/chatnotifiBadge"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_below="@+id/shortlistsep"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shortlistedd"
+                    android:layout_toRightOf="@+id/chatnotifiBadge"
+                    android:layout_centerVertical="false"
+                    android:text="Congratulation! You're shortlisted!"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="normal|bold"
+                    android:layout_below="@+id/shortlistsep"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hireCardView"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardElevation="0dp"
+                        android:clickable="true"
+                        android:id="@+id/pendingofferCardView">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/hiredRlay"
+                            android:visibility="visible"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="10dp"
+                            android:background="@android:color/background_light"
+                            android:paddingBottom="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:id="@+id/seperatelay2"
+                                android:background="@color/cardview_shadow_start_color"
+                                android:layout_marginRight="10dp">
+
+                            </RelativeLayout>
+
+
+                            <View
+                                android:layout_width="7dp"
+                                android:layout_height="7dp"
+                                android:background="@drawable/redcircle_bg"
+                                android:id="@+id/hirednotifiBadge"
+                                android:visibility="gone"
+                                android:layout_alignParentRight="false"
+                                android:layout_marginRight="5dp"
+                                android:layout_alignParentBottom="false"
+                                android:layout_below="@+id/seperatelay2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/hirednotifiBadge"
+                                android:text="Woots! You're hired! "
+                                android:textColor="@color/colorShortList"
+                                android:layout_centerVertical="true"
+                                android:layout_below="@+id/seperatelay2"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/hiredtxt" />
+
+                            <TextView
+                                android:text="View More"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/viewmorehirebtn"
+                                android:layout_marginRight="5dp" />
+
+                            <ImageView
+                                android:id="@+id/viewmorehirebtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"/>
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/acceptrejectLay"
+                        android:visibility="visible">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:id="@+id/rejectCardView"
+                            app:cardElevation="5dp"
+                            android:layout_marginBottom="15dp">
+
+                            <TextView
+                                android:text="REJECT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView41"
+                                android:padding="5dp"
+                                android:gravity="center"
+                                android:textColor="@android:color/background_light"
+                                android:background="@android:color/holo_red_light"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:id="@+id/acceptCardView"
+                            app:cardElevation="5dp"
+                            android:layout_marginBottom="15dp">
+
+                            <TextView
+                                android:text="ACCEPT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView42"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:background="@color/colorGreen"
+                                android:textColor="@color/buttonTextColor"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="0dp"
+                android:id="@+id/acceptedhiredCardView"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/acceptedhiredRlay"
+                    android:visibility="visible"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@android:color/background_light">
+
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/redcircle_bg"
+                        android:id="@+id/acceptedhirednotifiBadge"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="false"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_below="@+id/accepthiredsep"
+                        android:layout_marginTop="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:id="@+id/accepthiredsep"
+                        android:background="@color/cardview_shadow_start_color"
+                        android:layout_marginRight="10dp">
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:text="You have accepted job offer"
+                        android:textColor="@color/colorShortList"
+                        android:layout_below="@+id/accepthiredsep"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/acceptedhirednotifiBadge"
+                        android:id="@+id/normaltxt" />
+
+                    <TextView
+                        android:text="View More"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView43"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/viewmorebtn"
+                        android:layout_marginRight="5dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/viewmorebtn" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/rejectedhiredCardView"
+                android:visibility="gone"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rejectedhiredRlay"
+                    android:visibility="visible"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@android:color/background_light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:id="@+id/rejectedhiredsep"
+                        android:background="@color/cardview_shadow_start_color"
+                        android:layout_marginRight="10dp">
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:text="You have rejected job offer"
+                        android:textColor="@android:color/holo_red_light"
+                        android:layout_below="@+id/rejectedhiredsep"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rejectedtxt2" />
+
+                    <TextView
+                        android:text="View More"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/viewmorerejectbtn"
+                        android:layout_marginRight="5dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/viewmorerejectbtn" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="0dp"
+                android:id="@+id/updatehiredCardView"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/updatehiredRlay"
+                    android:visibility="visible"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@android:color/background_light">
+
+                    <View
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/redcircle_bg"
+                        android:id="@+id/updatenotifiBadge"
+                        android:visibility="visible"
+                        android:layout_alignParentRight="false"
+                        android:layout_marginRight="5dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_below="@+id/updatehiredsep"
+                        android:layout_marginTop="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:id="@+id/updatehiredsep"
+                        android:background="@color/cardview_shadow_start_color"
+                        android:layout_marginRight="10dp">
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:text="Job offer has been updated!"
+                        android:textColor="@color/colorShortList"
+                        android:layout_below="@+id/updatehiredsep"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/updatenotifiBadge" />
+
+                    <TextView
+                        android:text="View More"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/viewmoreupdatebtn"
+                        android:layout_marginRight="5dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_chevron_right_black_24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/viewmoreupdatebtn" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/removedRlay"
+                android:visibility="gone"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:background="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/removesep"
+                    android:background="@color/cardview_shadow_start_color"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/removedtxt"
+                    android:layout_centerVertical="false"
+                    android:text="Job has been removed"
+                    android:layout_below="@+id/removesep" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

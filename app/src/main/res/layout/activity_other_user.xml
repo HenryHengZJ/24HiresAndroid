@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.OtherUserScene.OtherUser"
+    android:background="@android:color/background_light">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="435dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@android:color/background_light">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleMarginBottom="70dp"
+            app:contentScrim="@color/colorAccent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:id="@+id/postImage"
+                android:background="@android:color/transparent"
+                android:alpha="1"
+                app:srcCompat="@color/colorPrimaryDark" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@android:color/black"
+                android:fitsSystemWindows="true"
+                android:alpha="0.3"
+                android:layout_gravity="top" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postName"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp"
+                    android:textStyle="normal|bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="90dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilepic"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#ffffff"
+                    android:scaleType="centerCrop"
+                    android:background="@android:color/transparent"
+                    android:visibility="visible"
+                    android:src="@drawable/defaultprofile_pic"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="130dp"
+                    android:layout_centerHorizontal="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/LocationLay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/profilepic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="18dp"
+                        app:srcCompat="@drawable/home_location"
+                        android:id="@+id/imageView"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/postLocation"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        android:ellipsize="end"
+                        android:layout_centerHorizontal="false"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/imageView"
+                        android:padding="5dp"
+                        android:maxLines="1" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratetxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/LocationLay"
+                    android:textColor="@color/calendar_text_active" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleY="0.8"
+                    android:scaleX="0.8"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    android:layout_below="@+id/ratetxt"
+                    android:id="@+id/userratingbar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:text="MESSAGE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chatusertxt"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerVertical="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/chatbackground"
+                    android:layout_alignParentBottom="false"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_below="@+id/userratingbar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_other"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="55dp"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabTextAppearance="@style/NavigationTabTextAppeareance"
+                app:tabSelectedTextColor="@color/colorAccent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:fitsSystemWindows="false"
+                app:tabTextColor="@color/com_facebook_button_background_color_focused_disabled"
+                android:background="@color/buttonTextColor"
+                android:layout_below="@+id/chatusertxt" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

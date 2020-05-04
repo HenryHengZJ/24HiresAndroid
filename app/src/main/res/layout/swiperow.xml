@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/cardview"
+        app:cardBackgroundColor="@android:color/background_light"
+        android:layout_margin="15dp">
+
+        <RelativeLayout
+            android:id="@+id/Rlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:srcCompat="@android:color/transparent"
+                android:id="@+id/postImage"
+                android:layout_margin="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postName"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrssed"
+                android:layout_alignParentTop="false"
+                android:textStyle="normal|bold"
+                android:layout_marginLeft="15dp"
+                android:paddingRight="10dp"
+                android:text="gyh"
+                android:layout_below="@+id/postImage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postCompany"
+                android:layout_marginTop="7dp"
+                android:maxLines="1"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/black"
+                android:textStyle="normal|bold"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/postName"
+                android:layout_toRightOf="@+id/profileLay"
+                android:text="hjk"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/postDescrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/cast_intro_overlay_background_color"
+                android:layout_alignParentTop="false"
+                android:layout_marginTop="7dp"
+                android:layout_below="@+id/postCompany"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:layout_toRightOf="@+id/profileLay"
+                android:paddingRight="10dp"
+                android:text="jkl"
+                android:layout_marginBottom="15dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:id="@+id/left_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/cancelswipe2"
+                android:layout_centerHorizontal="false"
+                android:layout_gravity="left"
+                android:layout_weight="1" />
+            <ImageView
+                android:id="@+id/right_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/applyswipe3"
+                android:layout_below="@+id/offer_image"
+                android:layout_centerHorizontal="false"
+                android:layout_gravity="right"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.OtherUserScene.OtherUser"
+    android:background="@android:color/background_light">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_toolbar_other"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@android:color/background_light"
+        android:layout_height="380dp"
+        android:fitsSystemWindows="true">
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleMarginBottom="70dp"
+            app:contentScrim="@color/colorAccent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:id="@+id/postImage"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@color/colorPrimaryDark" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"
+                    android:alpha="0.3"
+                    android:layout_alignBottom="@+id/postImage"
+                    android:id="@+id/viewview" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userNametxt"
+                    android:textColor="@android:color/background_light"
+                    android:fontFamily="sans-serif"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:textSize="18sp"
+                    android:layout_marginTop="100dp"
+                    android:textStyle="normal|bold" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilepic"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="#ffffff"
+                    android:scaleType="centerCrop"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentTop="false"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible"
+                    android:layout_marginTop="140dp"
+                    android:src="@drawable/defaultprofile_pic" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:srcCompat="@drawable/editbtn"
+                    android:id="@+id/changeprofilepic"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/whitecircle_bg"
+                    android:padding="10dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignRight="@+id/profilepic"
+                    android:layout_alignBottom="@+id/profilepic" />
+
+                <ImageButton
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/camerawhite"
+                    android:id="@+id/profileeditbtn"
+                    android:background="@drawable/circle_transparent_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_width="40dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignBottom="@+id/viewview"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingtxt"
+                    android:layout_below="@+id/profilepic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/calendar_text_active"
+                    android:textStyle="normal|bold"
+                    android:textSize="15sp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleY="0.8"
+                    android:scaleX="0.8"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    android:layout_below="@+id/ratingtxt"
+                    android:id="@+id/userratingbar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_other"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="55dp"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabTextAppearance="@style/NavigationTabTextAppeareance"
+                app:tabSelectedTextColor="@color/colorAccent"
+                android:layout_height="50dp"
+                app:tabTextColor="@color/cardview_shadow_start_color"
+                android:background="@color/buttonTextColor"
+                android:layout_gravity="bottom" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:fillViewport="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCompCard"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/tipsLay"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/compcardlogo2"
+            android:id="@+id/imageView37"
+            android:padding="7dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/bodyTextColor"
+            android:text="Add CompCard as Cover Photo to boost your profile view!"
+            android:elevation="1dp"
+            android:layout_toRightOf="@+id/imageView37"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/learnmoreBtn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Learn \nMore"
+            android:background="@null"
+            android:textColor="@color/bodyTextColor"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:id="@+id/learnmoreBtn" />
+
+    </RelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:padding="10dp">
+
+    <TextView
+        android:text="What is Comp Card?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Lay"
+        android:layout_below="@+id/textView18"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/compcard_template"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra = "5dp"
+        android:id="@+id/dialogtxt"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:text="A comp card (also called composite card, z card, zed card or sed card) is a marketing tool for freelancers to be serve as a portfolio and are often used as a business card."
+        android:textColor="@color/bodyTextColor"
+        android:layout_below="@+id/Lay"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/okBtn"
+        android:layout_below="@+id/dialogtxt"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorSplash"
+        android:text="DISMISS" />
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra = "5dp"
+        android:id="@+id/dialogtxt"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textColor="@color/bodyTextColor" />
+
+    <Button
+        android:text="SHORTLIST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hireBtn"
+        android:layout_below="@+id/dialogtxt"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <Button
+        android:text="CANCEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelBtn"
+        android:layout_toLeftOf="@+id/hireBtn"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/hireBtn" />
+</RelativeLayout>

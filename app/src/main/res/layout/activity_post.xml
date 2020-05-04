@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zjheng.jobseed.jobseed.PostScene.Post"
+    android:background="@android:color/background_light">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_other"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        app:layout_collapseMode="pin"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/profilebg3"
+                    android:id="@+id/PostImage"
+                    android:scaleType="centerCrop" />
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/addphotoBtn"
+                    android:background="@drawable/addphotobtn"
+                    app:srcCompat="@drawable/addprofilepic"
+                    android:scaleType="fitXY"
+                    android:layout_alignBottom="@+id/profilepic"
+                    android:layout_alignLeft="@+id/profilepic"
+                    android:layout_alignStart="@+id/profilepic"
+                    android:elevation="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginTop="40dp"
+                    android:padding="15dp" />
+
+                <TextView
+                    android:text="Add a photo relevant to the job you are posting. (i.e workplace, team)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="16sp"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/addphotoBtn"
+                    android:layout_marginTop="20dp" />
+
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/addprofilepic"
+                    android:id="@+id/chgPostImage"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="160dp"
+                    android:padding="3dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:text="Job Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="normal|bold"
+                android:textSize="15sp"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:inputType="text|textCapSentences|textMultiLine"
+                android:hint ="Add job's title / position here "
+                android:scrollHorizontally="false"
+                android:id="@+id/postName"
+                android:textColor="@color/bodyTextColor"
+                android:gravity="top|center_vertical"
+                android:paddingTop="10dp"
+                android:lineSpacingExtra = "5dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/post_edittext_bg"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:imeOptions="actionDone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:text="Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="normal|bold"
+                android:textSize="15sp"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:inputType="text|textCapSentences|textMultiLine"
+                android:hint ="Describe your job here"
+                android:scrollHorizontally="false"
+                android:background="@drawable/post_edittext_bg"
+                android:id="@+id/postDescrip"
+                android:textColor="@color/bodyTextColor"
+                android:gravity="top|center_vertical"
+                android:paddingTop="10dp"
+                android:lineSpacingExtra = "5dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:imeOptions="actionDone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:text="Category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="normal|bold"
+                android:textSize="15sp"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:hint ="Select your job's category here"
+                android:background="@drawable/post_edittext_bg"
+                android:scrollHorizontally="false"
+                android:id="@+id/postCategoryx"
+                android:textColor="@color/bodyTextColor"
+                android:gravity="top|center_vertical"
+                android:paddingTop="10dp"
+                android:lineSpacingExtra = "5dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColorLink="@android:color/white"
+                android:inputType="none"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <TextView
+                android:text="Company / Store"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:inputType="text|textCapSentences|textMultiLine"
+                android:hint ="Add your company's name here"
+                android:background="@drawable/post_edittext_bg"
+                android:scrollHorizontally="false"
+                android:id="@+id/postCompany"
+                android:textColor="@color/bodyTextColor"
+                android:gravity="top|center_vertical"
+                android:paddingTop="10dp"
+                android:lineSpacingExtra = "5dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:imeOptions="actionDone"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:text="Location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:layout_width ="match_parent"
+                android:layout_height ="wrap_content"
+                android:inputType="none|textMultiLine|textNoSuggestions"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint ="Pick your job's location here"
+                android:background="@drawable/post_edittext_bg"
+                android:scrollHorizontally="false"
+                android:id="@+id/postLocation"
+                android:textColor="@color/bodyTextColor"
+                android:gravity="top|center_vertical"
+                android:paddingTop="10dp"
+                android:lineSpacingExtra = "5dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:text="Wages (Optional)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:paddingLeft="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnercurrency"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp" />
+
+                <EditText
+                    android:layout_width ="110dp"
+                    android:layout_height ="wrap_content"
+                    android:hint ="000 000 000"
+                    android:background="@drawable/post_edittext_bg"
+                    android:scrollHorizontally="false"
+                    android:id="@+id/postWages"
+                    android:textColor="@color/bodyTextColor"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:lineSpacingExtra = "5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="9"
+                    android:imeOptions="actionNext" />
+
+                <TextView
+                    android:text="."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView33"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textStyle="normal|bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:layout_width ="40dp"
+                    android:layout_height ="wrap_content"
+                    android:hint ="00"
+                    android:background="@drawable/post_edittext_bg"
+                    android:scrollHorizontally="false"
+                    android:id="@+id/postCoins"
+                    android:textColor="@color/bodyTextColor"
+                    android:paddingTop="10dp"
+                    android:lineSpacingExtra = "5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="2"
+                    android:gravity="center" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerrate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="Dates (Optional)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:paddingLeft="10dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="40dp">
+
+                <EditText
+                    android:layout_width ="match_parent"
+                    android:layout_height ="wrap_content"
+                    android:inputType="none"
+                    android:hint ="Pick your job's working date"
+                    android:background="@drawable/post_edittext_bg"
+                    android:scrollHorizontally="false"
+                    android:id="@+id/postDate"
+                    android:textColor="@color/bodyTextColor"
+                    android:gravity="top|center_vertical"
+                    android:paddingTop="10dp"
+                    android:lineSpacingExtra = "5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" />
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    app:srcCompat="@drawable/ic_dialog_close_light"
+                    android:id="@+id/cleardateBtn"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

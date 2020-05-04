@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zjheng.jobseed.jobseed.MainActivity"
+    android:background="@color/shadowColor"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/nestedscroll"
+            android:layout_alignParentTop="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:background="@android:color/background_light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bannerLay">
+
+                    <com.zjheng.jobseed.jobseed.CustomUIClass.ClickableViewPager
+                        android:id="@+id/adscontainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabDots"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/bannerLay"
+                    android:id="@+id/latestjobLay"
+                    android:background="@color/buttonTextColor"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <TextView
+                        android:text="Talents in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView37"
+                        android:textColor="@color/bodyTextColor"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:background="@color/buttonTextColor"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:cardBackgroundColor="?attr/colorPrimary"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:id="@+id/locationCardView">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/currentLocation"
+                            android:textSize="12sp"
+                            android:textColor="@color/cardview_light_background"
+                            android:text="PENANG"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/latestjobLay"
+                    android:id="@+id/categoryLay"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="3.5dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/musicimg"
+                                android:scaleType="centerCrop" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Music"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3.5dp"
+                            android:layout_marginRight="7dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:id="@+id/sportimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Sports"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView2"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="3.5dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:cropToPadding="false"
+                                android:id="@+id/chessimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Chess"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3.5dp"
+                            android:layout_marginRight="7dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:id="@+id/photoimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Photography"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView3"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="3.5dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:cropToPadding="false"
+                                android:id="@+id/culinaryimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Food Beverage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3.5dp"
+                            android:layout_marginRight="7dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:id="@+id/techimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Tech Savvy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="7dp"
+                            android:layout_marginRight="3.5dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:cropToPadding="false"
+                                android:id="@+id/handymanimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Home Handyman"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="3.5dp"
+                            android:layout_marginRight="7dp"
+                            android:clickable="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:id="@+id/tourguideimg" />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:fitsSystemWindows="true"
+                                android:background="@drawable/cast_expanded_controller_bg_gradient_light"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="bottom" />
+
+                            <TextView
+                                android:text="Tour Guides"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/buttonTextColor"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:layout_marginBottom="10dp"
+                                android:textStyle="normal|bold" />
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:id="@+id/noInternetLay"
+        android:visibility="gone">
+
+        <TextView
+            android:text="No Internet Connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView24"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorLightGray"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/nointernetconnection"
+            android:id="@+id/imageView16"
+            android:layout_above="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:layout_width="60dp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/retryBtn"
+            android:layout_below="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            app:cardBackgroundColor="@color/com_facebook_button_background_color_focused_disabled"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/reload"
+                    android:id="@+id/imageView19"
+                    android:layout_weight="1"
+                    android:padding="7dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:text="Tap to Retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView26"
+                    android:textColor="@android:color/background_light"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

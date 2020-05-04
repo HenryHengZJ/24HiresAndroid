@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/cardview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:id="@+id/Rlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:id="@+id/postImage"
+                android:transitionName="jobimage"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:srcCompat="@drawable/profilebg3" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilepic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:civ_border_width="0dp"
+                app:civ_border_color="#00FFFFFF"
+                android:scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                android:visibility="visible"
+                android:src="@drawable/defaultprofile_pic"
+                android:layout_centerVertical="false"
+                android:layout_below="@+id/postImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userName"
+                android:layout_below="@+id/postImage"
+                android:layout_toRightOf="@+id/profilepic"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/bodyTextColor"
+                android:textStyle="normal|bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postDescrip"
+                android:layout_below="@+id/profilepic"
+                android:layout_alignStart="@+id/profilepic"
+                android:layout_alignLeft="@+id/profilepic"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/bodyTextColor"
+                android:lines="2"
+                android:ellipsize="end"
+                android:layout_marginRight="10dp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/star_rating"
+                android:id="@+id/ratingstar"
+                android:layout_alignParentBottom="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/postDescrip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingval"
+                android:layout_toRightOf="@+id/ratingstar"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorRate"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/postDescrip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingnum"
+                android:layout_toRightOf="@+id/ratingval"
+                android:layout_alignTop="@+id/ratingval"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/priceval"
+                android:fontFamily="sans-serif-light"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorSplash"
+                android:textStyle="normal|bold"
+                android:layout_below="@+id/postDescrip"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

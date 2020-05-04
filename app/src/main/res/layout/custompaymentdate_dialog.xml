@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra = "5dp"
+        android:id="@+id/dialogtxt"
+        android:padding="10dp"
+        android:text="Custom Payment Date"
+        android:textSize="14sp"
+        android:textColor="@color/bodyTextColor" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customLay"
+        android:layout_below="@+id/dialogtxt">
+
+        <EditText
+            android:layout_width ="match_parent"
+            android:layout_height ="wrap_content"
+            android:inputType="text|textCapSentences|textMultiLine"
+            android:hint ="e.g: 10 Days"
+            android:background="@drawable/post_edittext_bg"
+            android:scrollHorizontally="false"
+            android:id="@+id/customPaymentDate"
+            android:textColor="@color/bodyTextColor"
+            android:paddingTop="10dp"
+            android:lineSpacingExtra = "5dp"
+            android:paddingBottom="10dp"
+            android:textSize="16sp"
+            android:imeOptions="actionDone"
+            android:paddingLeft="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:text="After Event Finishes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView40"
+            android:layout_weight="1"
+            android:textColor="@color/bodyTextColor"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/okBtn"
+        android:layout_below="@+id/customLay"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <Button
+        android:text="CANCEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelBtn"
+        android:layout_toLeftOf="@+id/okBtn"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/okBtn" />
+</RelativeLayout>

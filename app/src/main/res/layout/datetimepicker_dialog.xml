@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:background="@color/buttonTextColor">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Select Dates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView39"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:textSize="16sp"
+            android:textStyle="normal|bold"
+            android:textColor="@color/buttonTextColor"
+            android:background="@color/colorAccent"
+            android:gravity="center" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/multiCardView"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/buttonTextColor"
+            android:id="@+id/multiLay"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:text="Single / Multiple Dates"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/multipledatetxt"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/calendar_text_highlighted" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/single_tick"
+                android:id="@+id/multipledates_img"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/shadowColor"
+        android:id="@+id/seperate1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/RangeCardView"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/buttonTextColor"
+            android:gravity="center_vertical"
+            android:id="@+id/RangeLay">
+
+            <TextView
+                android:text="Range Dates"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/rangedatetxt"
+                android:paddingLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/calendar_text_highlighted" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/single_tick"
+                android:id="@+id/rangedates_img"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/shadowColor"
+        android:layout_above="@+id/actionLay">
+
+    </RelativeLayout>
+
+
+    <com.squareup.timessquare.CalendarPickerView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:scrollbarStyle="outsideInset"
+        android:clipToPadding="false"
+        android:background="#FFFFFF"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/shadowColor">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:id="@+id/actionLay"
+        android:layout_alignParentBottom="false"
+        android:background="@color/buttonTextColor">
+
+        <Button
+            android:text="CANCEL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelBtn"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="14sp"
+            android:padding="15dp" />
+
+        <Button
+            android:text="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/okBtn"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAdd"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:padding="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

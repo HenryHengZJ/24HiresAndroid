@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/choosecamerabtn1"
+                android:id="@+id/imageButton"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:text="Camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrssed"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/imageButton" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/cameraAction">
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/choosegallerybtn1"
+                android:id="@+id/imageButton2"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:text="Gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView10"
+                android:gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrssed"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/imageButton2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/galleryAction">
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

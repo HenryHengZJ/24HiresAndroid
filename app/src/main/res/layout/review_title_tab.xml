@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REVIEW"
+            android:textColor="@color/com_facebook_button_background_color_focused_disabled"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:background="@drawable/redcircle_bg"
+            android:gravity="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="10sp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/tv_title"
+            android:layout_marginLeft="3dp"
+            android:layout_alignTop="@+id/tv_title" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

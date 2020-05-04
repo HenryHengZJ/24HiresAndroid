@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/transparent"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+        app:contentInsetStart="5dp">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/ic_arrow_back_white_24dp"
+            android:id="@+id/backBtn"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
+            android:paddingRight="13dp"
+            android:paddingLeft="13dp" />
+
+        <TextView
+            android:text="Images"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left"
+            android:layout_height="wrap_content"
+            android:id="@+id/titletxt"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:textColor="@color/buttonTextColor"
+            android:visibility="visible"
+            android:layout_marginLeft="16dp" />
+
+
+    </android.support.v7.widget.Toolbar>
+    <com.zjheng.jobseed.jobseed.CustomUIClass.ClickableViewPager
+        android:id="@+id/adscontainer"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
